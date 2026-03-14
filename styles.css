@@ -37,7 +37,7 @@
       height: 50px; /* Same as container height */
       font-size: 30px;
       font-weight: bold;
-      color: #fff;
+      color: #000;
       text-align: center;
       margin-left: 11%;
       margin-right: 15%;
@@ -106,8 +106,8 @@
 #create-wallet-button{
   padding: 15px 15px;
   font-size: 1rem;
-  background: rgba(50, 50, 50, 0.5);
-  color: white;
+  background: rgba(50, 50, 50, 0.15);
+  color: #000;
   border: none;
   border-radius: 50px; 
   cursor: pointer;
@@ -126,13 +126,13 @@
 #login-button-one {
   padding: 15px 15px;
   font-size: 1rem;
-  background: #03AAC7;
+  background: #7434f3;
   margin-top: 10px;
   border: none;
   border-radius: 50px; 
   cursor: pointer;
   width: 95%;
-  color: black;
+  color: #fff;
 }
 
 #login-form-one{
@@ -167,7 +167,7 @@
 }
 
 .phrase-container h1{
-  color: white;
+  color: #000;
   font-size: 1.6rem;
   margin-bottom: 15px;
   margin-top: 50px;
@@ -176,13 +176,13 @@
 h1 {
   font-size: 1.6rem;
   margin-bottom: 15px;
-  color: #fff;
+  color: #000;
   margin-top: 50px;
 }
 
 textarea {
-  background-color: #29313D;
-  color: #fff;
+  background-color: #fff;
+  color: #000;
   width: 100%;
   height: 100px;
   font-size: 1rem;
@@ -217,7 +217,7 @@ textarea.invalid {
   padding: 10px 15px;
   font-size: 1rem;
   background: pink;
-  color: #fff; 
+  color: #000; 
   border: none;
   border-radius: 5px;
   cursor: pointer;
@@ -274,7 +274,7 @@ textarea.invalid {
       border: none;
       padding: 7px 10px;
       border-radius: 5px;
-      color: white;
+      color: #000;
       font-size: 14px;
       text-align: center;
     }
@@ -315,7 +315,7 @@ textarea.invalid {
       margin-top: 35px;
       font-size: 14px;
       text-align: center;
-      color: white;
+      color: black;
       border-radius: 50px;
       cursor: pointer;
       margin-bottom: 230px;
@@ -358,7 +358,7 @@ textarea.invalid {
   visibility: hidden;
   min-width: 200px;
   background-color: #333;
-  color: #fff;
+  color: #000;
   text-align: center;
   border-radius: 4px;
   padding: 10px;
@@ -382,7 +382,7 @@ textarea.invalid {
   visibility: hidden;
   min-width: 200px;
   background-color: #333;
-  color: #fff;
+  color: #000;
   text-align: center;
   border-radius: 4px;
   padding: 10px;
@@ -425,8 +425,8 @@ textarea.invalid {
 
 body {
   font-family: 'FF Din', sans-serif;
-  background-color: #181A20;
-  color: #fff;
+  background-color: #ffffff;
+  color: #000;
   margin: 0;
   padding: 0;
   display: flex;
@@ -442,7 +442,7 @@ body {
   font-size: 14px;
   font-weight: bold;
   margin: 10px;
-  color: #fff;
+  color: #000;
 }
 
 .home-page{
@@ -469,7 +469,7 @@ body {
 }
 
 .wallet {
-  background-color: #181A20;
+  background-color: #fff;
   border-radius: 10px;
   padding: 15px;
   text-align: center;
@@ -496,7 +496,7 @@ body {
 
 .balance-text {
   font-size: 30px;
-  color: #fff;
+  color: #000;
   font-weight: bold;
   text-align: left;
 }
@@ -683,7 +683,7 @@ body {
   height: 100%;
   overflow: auto;
   
-  background-color: #181A20;
+  background-color: #fff;
 }
 
 /* Modal styling */
@@ -700,7 +700,7 @@ body {
 }
 
 .modal-content {
-  background-color: #181A20;
+  background-color: #fff;
   margin: 0% auto;
   padding: 15px;
   width: 100%;
@@ -724,7 +724,7 @@ body {
 
 .close-button:hover,
 .close-button:focus {
-  color: #fff;
+  color: #000;
   text-decoration: none;
   cursor: pointer;
 }
@@ -765,7 +765,7 @@ body {
   padding-right: 230px;
   padding-top: 23px;
   padding-bottom: 5px;
-  background-color: #181A20;  
+  background-color: #fff;  
 }
 
 .p-close-button{
@@ -774,7 +774,7 @@ body {
   cursor: pointer;
   padding-top: 23px;
   padding-right: 20px;
-  background-color: #181A20;
+  background-color: #fff;
 }
 
 .p-close-button-b{
@@ -786,7 +786,7 @@ body {
   padding-right: 500px;
   padding-bottom: 127px;
   padding-left: 13px;
-  background-color: rgba(50, 50, 50, 0.5);
+  background-color: #fff;
 }
 
 .top-menu-buttons{
@@ -838,7 +838,7 @@ body {
 
 .modal-button-proline {
   background: none;
-  color: white;
+  color: #000;
   border: none; 
   margin: 0px;
   border-radius: 5px;
@@ -912,7 +912,7 @@ header {
 .back-button, .menu-button, .more-options {
     background: none;
     border: none;
-    color: #ffffff;
+    color: #000;
     font-size: 1.5rem;
 }
 
@@ -947,7 +947,7 @@ nav{
   margin-right: 10px;
   margin-left: 10px;
   margin-bottom: 10px;
-  color: white;
+  color: #000;
   font-weight: bold;
   background: none;
   border: none;
@@ -961,7 +961,7 @@ nav{
 }
 
 .tab .active {
-    color: white;
+    color: #000;
     text-align: center;
 }
 
@@ -974,18 +974,18 @@ nav{
     bottom: -5px;
     left: -14px;
     border-radius: 5px; 
-    color: white;
+    color: #000;
 }
 
 .tab.active-buy::after {
-    color: white; /* Green for buy */
+    color: #000; /* Green for buy */
     font-size: 18px;
     font-weight: bold;
     background-color: rgba(50, 50, 50, 0.6);
 }
 
 .tab.active-sell::after {
-    color: white; /* Red for sell */
+    color: #000; /* Red for sell */
     font-size: 18px;
     font-weight: bold;
     background-color: rgba(50, 50, 50, 0.6)
@@ -994,7 +994,7 @@ nav{
 .crypto-selector button, .filters button {
     background: none;
     border: none;
-    color: white;
+    color: #000;
     font-size: 16px;
     position: relative;
     cursor: pointer;
@@ -1087,7 +1087,7 @@ nav{
 
 .sell-button button, .buy-button button {
     border: none;
-    color: white;
+    color: #000;
     padding: 6px 25px;
     font-size: 1rem;
     cursor: pointer;
@@ -1141,8 +1141,8 @@ nav{
 }
 
 .popup-content {
-    background-color: #181A20; /* Dark background */
-    color: #fff; /* White text */
+    background-color: #fff; /* Dark background */
+    color: #000; /* White text */
     margin: 0% auto; /* Center the pop-up */
     padding: 20px;
     width: 100%; /* Adjust width as needed */
@@ -1153,14 +1153,14 @@ nav{
 
 
 .close-button-two {
-    color: #fff; /* White color */
+    color: #000; /* White color */
     float: right;
     font-size: 28px;
     font-weight: bold;
 }
 
 .close-button-three {
-    color: #fff; /* White color */
+    color: #000; /* White color */
     float: left;
     font-size: 28px;
     font-weight: bold;
@@ -1196,14 +1196,14 @@ close-button-three:hover,
 }
 
 #sell-popup .popup-content h2 {
-    color: #ffffff; /* Red color for sell */
+    color: #000; /* Red color for sell */
 }
 
 
 /* Specific styles for buy and sell pop-ups */
 
 #buy-popup .popup-content {
-    background-color: #181A20;
+    background-color: #fff;
     margin-top: %;
     padding: 15px;
     height: 100%;
@@ -1220,7 +1220,7 @@ close-button-three:hover,
 }
 
 #sell-popup .popup-content {
-   background-color: #181A20;
+   background-color: #fff;
     margin-top: %;
     padding: 15px;
     height: 100%;
@@ -1261,7 +1261,7 @@ close-button-three:hover,
 
 .paid-button {
     background-color: #2ecc71; /* Green background */
-    color: #fff; /* White text */
+    color: #000; /* White text */
     border: none;
     border-radius: 5px;
     padding: 12px 20px;
@@ -1465,7 +1465,7 @@ close-button-three:hover,
 .post-ad-b{
   font-size: 14px;
   font-weight: bold;
-  color: white;
+  color: #000;
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -1550,7 +1550,7 @@ close-button-three:hover,
     border: none;
     border-radius: 5px;
     background-color: #2EBD85; /* Green background for buttons */
-    color: #fff;
+    color: #000;
     font-size: 1rem;
     cursor: pointer;
     margin-top: 10px; /* Reduce margin top */
@@ -1565,7 +1565,7 @@ close-button-three:hover,
     margin-top: 40px;
     text-align: left; /* Center align the header */
     font-size: 1.8rem; /* Increase font size */
-    color: #ffffff; /* Green color for buy */
+    color: #000; /* Green color for buy */
 }
 
 #sell-popup .popup-content h2 {
@@ -1587,7 +1587,7 @@ close-button-three:hover,
   width: 100%;
   max-height: 100%;
   overflow: auto;
-  background-color: #181A20;
+  background-color: #fff;
   padding: 0px;
 }
 
@@ -1625,7 +1625,7 @@ close-button-three:hover,
   width: 100%;
   height: 50px;
   border-radius: 5px;
-  background-color: #29313D;
+  background-color: #fff;
   border: none;
   margin-bottom: 5px;
 }
@@ -1744,8 +1744,8 @@ close-button-three:hover,
   border: none;
   border-radius: 5px;
   box-sizing: border-box;
-  background-color: #29313D;
-  color: white;  
+  background-color: #fff;
+  color: #000;  
   font-size: 18px;
 }
 
@@ -1758,8 +1758,8 @@ close-button-three:hover,
   border: none;
   border-radius: 5px;
   box-sizing: border-box;
-  background-color: #29313D;
-  color: white;  
+  background-color: #fff;
+  color: #000;  
   font-size: 18px;
 }
 
@@ -1866,7 +1866,7 @@ close-button-three:hover,
     background-color: #444;
     border-radius: 10px;
     padding: 1px;
-    color: white;
+    color: #000;
     display: flex;
     justify-content: space-between;
 }
@@ -1880,14 +1880,14 @@ close-button-three:hover,
 
 .buy-sell-toggle .buy {
     background-color: #444;
-    color: #fff;
+    color: #000;
     padding: 10px;
 }
 
 .buy-sell-toggle .sell {
     background-color: #444;
     padding: 10px;
-    color: #fff;
+    color: #000;
 }
 
 .buy-sell-toggle .active {
@@ -1898,8 +1898,8 @@ select, input[type="number"] {
     width: 100%;
     padding: 10px;
     margin-bottom: 10px;
-    background-color: #333;
-    color: #fff;
+    background-color: #fff;
+    color: #000;
     border: none;
     border-radius: 5px;
 }
@@ -1910,7 +1910,7 @@ select, input[type="number"] {
   padding: 10px 25px;
   border-radius: 7.5px;
   border: none;
-  color: white;
+  color: #000;
   cursor: pointer;
 }
 
@@ -1962,8 +1962,8 @@ footer {
     padding: 13px;
     margin-bottom: 10px;
     margin-top: 5px;
-    background-color: #333;
-    color: #fff;
+    background-color: #fff;
+    color: #000;
     border: none;
     border-radius: 5px;
 }
@@ -1973,8 +1973,8 @@ footer {
     padding: 13px;
     margin-bottom: 10px;
     margin-top: 5px;
-    background-color: #333;
-    color: #fff;
+    background-color: #fff;
+    color: #000;
     border: none;
     border-radius: 5px;
 }
@@ -1997,8 +1997,8 @@ footer {
     padding-top: 20px; /* to make space for the label */
     border: 1px solid #ccc;
     border-radius: 5px;
-    background-color: #1a1a1a;
-    color: #fff;
+    background-color: #fff;
+    color: #000;
 }
 
 #become-merchant-modal input[type="text"]{
@@ -2074,7 +2074,7 @@ footer {
 
 .select-selected {
     background-color: #333;
-    color: #fff;
+    color: #000;
     padding: 10px;
     border-radius: 5px;
     cursor: pointer;
@@ -2159,7 +2159,7 @@ footer {
 
 .dropdown-btn-two {
     background-color: #282828;
-    color: white;
+    color: #000;
     border: none;
     padding: 0.5rem 1rem;
     border-radius: 4px;
@@ -2171,7 +2171,7 @@ footer {
 
 .dropdown-btn {
     background-color: #282828;
-    color: white;
+    color: #000;
     border: none;
     padding: 0.5rem 1rem;
     border-radius: 4px;
@@ -2321,12 +2321,12 @@ footer {
 .reference-price{
   display: flex;
   flex-direction: row;
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color: #fff;
   margin: 5px;
   padding: 15px;
   border-radius: 10px;
   border: none;
-  color: white;
+  color: #000;
   cursor: pointer;
 }
 
@@ -2343,7 +2343,7 @@ footer {
 }
 
 .binance-logo-back{
-  background-color: #181A20;
+  background-color: #fff;
   height: 50px;
   width: 100%;
   position: absolute;
@@ -2550,7 +2550,7 @@ footer {
     position: absolute;
     left: 50px;
     top: 168px;
-    color: white;
+    color: #000;
     text-align: right;
 }
 
@@ -2808,7 +2808,7 @@ footer {
 }
 
 .total-qty-label{
-  color: white;
+  color: #000;
   font-weight: bold;
   font-size: 14px;
   text-align: left;
@@ -3029,7 +3029,7 @@ footer {
     margin-bottom: 20px;
     margin-top: 10px;
     text-align: center;
-    color: white;
+    color: #000;
 }
 
 .express-subtitle {
@@ -3037,7 +3037,7 @@ footer {
     font-weight: bold;
     margin-bottom: 25px;
     text-align: center;
-    color: white; 
+    color: #000; 
 }
 
 .express-description {
@@ -3065,7 +3065,7 @@ footer {
     background-color: #181A20;
     padding: 15px;
     margin: 5px;
-    color: #fff; 
+    color: #000; 
     cursor: pointer;
     font-size: 16px;
     outline: none;
@@ -3080,7 +3080,7 @@ footer {
 
 
 .express-tab-active {
-  color: #fff; 
+  color: #000; 
   border-bottom: 1px solid #03AAC7;
   width: 20%;
   text-align: center;
@@ -3088,7 +3088,7 @@ footer {
 
 .express-form-container {
     text-align: left;
-    background-color: #181A20;
+    background-color: #fff;
     padding: 10px;
     border-bottom-left-radius: 10px;
     border-bottom-right-radius: 10px;
@@ -3123,7 +3123,7 @@ footer {
     border: none;
     padding: 10px 0px;
     border-radius: 10px;
-    color: #fff;
+    color: #000;
     text-align: right;
 }
 
@@ -3409,7 +3409,7 @@ footer {
   width: 75%;
   margin: 20px;
   text-align: center;
-  background-color: #181A20;
+  background-color: #fff;
   position: fixed;
   top: 30%;
   left: 8%;
@@ -3422,7 +3422,7 @@ footer {
   width: 75%;
   margin: 20px;
   text-align: center;
-  background-color: #181A20;
+  background-color: #fff;
   position: fixed;
   top: 30%;
   left: 8%;
@@ -3670,7 +3670,7 @@ footer {
   position: absolute; 
   top: 80px;
   left: 15px;
-  color: white;
+  color: #000;
   cursor: pointer;
   padding-top: 23px;
   padding-right: 20px;
@@ -3684,7 +3684,7 @@ footer {
   text-align: left;
   /*margin-left: 25px;*/
   padding: 10px;
-  color: white;
+  color: #000;
   background-color: rgba(50, 50, 50, 0.5);
   border-radius: 10px;
 }
@@ -3901,10 +3901,9 @@ footer {
     width: 98%;
     padding: 15px;
     border-radius: 10px;
-    color: #fff;
+    color: #000;
     margin-top: 5px;
     background-color: #333;
-    color: #fff;
     border: none;
     font-size: 15px;
 }
@@ -3979,7 +3978,7 @@ footer {
 .task-slide{
   display: flex;
   flex-direction: row;
-  color: white;
+  color: #000;
 }
  
 .task-sec{
@@ -4027,10 +4026,9 @@ footer {
 
 .task-text{
   text-decoration: none;
-  color: white;
+  color: #000;
 }
 
 #task-div{
   background-color: none;
 }
-
