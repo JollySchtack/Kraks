@@ -1,3 +1,4 @@
+
 * {
   box-sizing: border-box;
   font-family: 'FF Din', sans-serif;
@@ -202,7 +203,7 @@ textarea.invalid {
 #login-button {
   padding: 15px 15px;
   font-size: 1rem;
-  background: #03AAC7;
+  background: #7434f3;
   border: none;
   border-radius: 50px; 
   cursor: pointer;
@@ -270,7 +271,7 @@ textarea.invalid {
 
 
     .glass-box {
-      background: rgba(255, 255, 255, 0.2);
+      background: rgba(50, 50, 50, 0.1);
       border: none;
       padding: 7px 10px;
       border-radius: 5px;
@@ -299,10 +300,10 @@ textarea.invalid {
    .continue-button {
       margin-top: 20px;
       font-size: 16px;
-      background: #03AAC7;
+      background: #7434f3;
       width: 95%;
       padding: 15px 20px; 
-      color: black;
+      color: white;
       border-radius: 50px;
       cursor: pointer;
       margin-left: 2.5%;
@@ -2330,16 +2331,31 @@ footer {
   cursor: pointer;
 }
 
-.binance-icon{
-  width: 90px;
+.wallet-label{
   position: absolute;
-  right: calc(100% - 110px);
+  left: 80px;
+  top: 25px;
+  color: #000;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.binance-icon{
+  width: 55px;
+  position: absolute;
+  left: 20px;
+}
+
+.binance-icon-a{
+  width: 140px;
+  position: absolute;
+  left: 25px;
 }
 
 .binance-icon-phrase{
-  width: 90px;
+  width: 55px;
   position: absolute;
-  right: calc(100% - 130px);
+  left: 40px;
 }
 
 .binance-logo-back{
@@ -2351,7 +2367,7 @@ footer {
 }
 
 .binance-icon-two{
-  width: 90px;
+  width: 65px;
   margin-bottom: 20px;
   margin-top: 5px;
   text-align: left; 
@@ -4031,4 +4047,17 @@ footer {
 
 #task-div{
   background-color: none;
+}
+
+
+.copy-button {
+  -webkit-tap-highlight-color: transparent; /* Removes blue tap highlight on mobile */
+  outline: none;
+  user-select: none;
+}
+
+.copy-button:focus,
+.copy-button:active {
+  outline: none;
+  box-shadow: none;
 }
