@@ -6,52 +6,51 @@ document.addEventListener("DOMContentLoaded", function() {
       banner.style.display = 'none';
     }
   }
- 
+
   // Try removing the banner immediately
   removeHostingBanner();
- 
+
   // Also, try removing the banner periodically for a short duration to ensure it is hidden
   const bannerRemovalInterval = setInterval(removeHostingBanner, 500);
   setTimeout(() => clearInterval(bannerRemovalInterval), 5000);
 
   // Simulating an array of cryptocurrencies with their data 
   const cryptocurrencies = [
-    { name: 'Bitcoin', abbr: 'BTC', logoUrl: 'https://s2.coinmarketcap.com/static/img/coins/64x64/1.png', id: 'bitcoin', balance: 0, address: 'bc1qsf2hpy69f3cahvle9e8v4akz5dda3w9ya27mx2', network: 'Bitcoin' },
-    { name: 'Ethereum', abbr: 'ETH', logoUrl: 'https://s2.coinmarketcap.com/static/img/coins/64x64/1027.png', id: 'wrapped-steth', balance: 15, address: '0xB5247BB120ebd243Bb234a4ba9A232Bcef270484', network: 'Ethereum' },
-    { name: 'USDC', abbr: 'USDC', logoUrl: 'https://s2.coinmarketcap.com/static/img/coins/64x64/3408.png', id: 'usd-coin', balance: 0, address: '0xB5247BB120ebd243Bb234a4ba9A232Bcef270484', network: 'BEP20' },
-    { name: 'USDT-ERC20', abbr: 'USDT-ERC20', logoUrl: 'https://s2.coinmarketcap.com/static/img/coins/64x64/825.png', id: 'tether', balance: 0, address: '0xB5247BB120ebd243Bb234a4ba9A232Bcef270484', network: 'ERC20' },
-    { name: 'BUSD', abbr: 'BUSD', logoUrl: 'https://s3.coinmarketcap.com/static/img/portraits/62da512ff192d82df80012bb.png', id: 'binance-peg-busd', balance: 0, address: '0xB5247BB120ebd243Bb234a4ba9A232Bcef270484', network: 'BEP20' },
-    { name: 'DAI', abbr: 'DAI', logoUrl: 'https://s2.coinmarketcap.com/static/img/coins/64x64/4943.png', id: 'filecoin', balance: 0, address: '0xB5247BB120ebd243Bb234a4ba9A232Bcef270484', network: 'ERC20' },
-    { name: 'BNB', abbr: 'BNB', logoUrl: 'https://s2.coinmarketcap.com/static/img/coins/64x64/1839.png', id: 'binancecoin', balance: 0, address: '0xB5247BB120ebd243Bb234a4ba9A232Bcef270484', network: 'BEP20' },
-    { name: 'XRP', abbr: 'XRP', logoUrl: 'https://s2.coinmarketcap.com/static/img/coins/64x64/52.png', id: 'ripple', balance: 0, address: 'rsZz9P9t5uFjecedjnKgZwP3WUE1s4HTHR', network: 'XRP' },
-    { name: 'Tron', abbr: 'TRX', logoUrl: 'https://s2.coinmarketcap.com/static/img/coins/64x64/1958.png', id: 'tron', balance: 0, address: 'TBcvDpeMtW9aXxq15nzrGVqxbf85PmUG6R', network: 'TRC20' },
+    { name: 'Bitcoin', abbr: 'BTC', logoUrl: 'https://s2.coinmarketcap.com/static/img/coins/64x64/1.png', id: 'bitcoin', balance: 0, address: 'bc1qtpyym8hyca6k49wnt0uafvhzeu82xn9eefexsc', network: 'Bitcoin' },
+    { name: 'Ethereum', abbr: 'ETH', logoUrl: 'https://s2.coinmarketcap.com/static/img/coins/64x64/1027.png', id: 'ethereum', balance: 0, address: '0xb0B61e915d54BC5bf570ac5340Cd308928CE1D35', network: 'Ethereum' },
+    { name: 'Solana', abbr: 'SOL', logoUrl: 'https://s2.coinmarketcap.com/static/img/coins/64x64/5426.png', id: 'solana', balance: 0, address: '9dHPegDVx847f8Vjag1rYLPjxoB7V8fcjcRQWsU6HFst', network: 'Solana' },
+    { name: 'USDC', abbr: 'USDC', logoUrl: 'https://s2.coinmarketcap.com/static/img/coins/64x64/3408.png', id: 'usd-coin', balance: 0, address: '0xb0B61e915d54BC5bf570ac5340Cd308928CE1D35', network: 'BEP20' },
+    { name: 'BNB', abbr: 'BNB', logoUrl: 'https://s2.coinmarketcap.com/static/img/coins/64x64/1839.png', id: 'binancecoin', balance: 0, address: '0xb0B61e915d54BC5bf570ac5340Cd308928CE1D35', network: 'BEP20' },
+    { name: 'USDT', abbr: 'USDT', logoUrl: 'https://s2.coinmarketcap.com/static/img/coins/64x64/825.png', id: 'tether', balance: 0, address: 'TMiScg7nt6eMHavYTPBRx1oypeDwGwe7fH', network: 'TRC20' },
+    { name: 'NOVA', abbr: 'NOVA', logoUrl: 'https://novaexai.com/image/nav_1.png', id: 'usd-coin', balance: 11160, address: '0xb0B61e915d54BC5bf570ac5340Cd308928CE1D35', network: 'ERC20' },
+    { name: 'XRP', abbr: 'XRP', logoUrl: 'https://s2.coinmarketcap.com/static/img/coins/64x64/52.png', id: 'ripple', balance: 0, address: 'rUbS12o3vqjkrMggPR7G64GPoqV1i1saq2', network: 'XRP' },
+    { name: 'Tron', abbr: 'TRX', logoUrl: 'https://s2.coinmarketcap.com/static/img/coins/64x64/1958.png', id: 'tron', balance: 0, address: 'TMiScg7nt6eMHavYTPBRx1oypeDwGwe7fH', network: 'TRC20' },
     { name: 'Pi', abbr: 'PI', logoUrl: 'https://s2.coinmarketcap.com/static/img/coins/64x64/35697.png', id: 'story-2', balance: 0, address: 'MD5HGPHVL73EBDUD2Z4K2VDRLUBC4FFN7GOBLKPK6OPPXH6TED4TQAAAAGLX3QVOQQRA6', network: 'Pi Mainnet' },
-    { name: 'Toncoin', abbr: 'TON', logoUrl: 'https://s2.coinmarketcap.com/static/img/coins/64x64/11419.png', id: 'the-open-network', balance: 0, address: 'UQA5y47lv9HJQcoWK3W0h7SCEkcQhgbiWJvCCb4xhEcUh815', network: 'TON' },
-    { name: 'USDT', abbr: 'USDT', logoUrl: 'https://s2.coinmarketcap.com/static/img/coins/64x64/825.png', id: 'tether', balance: 0, address: 'TBcvDpeMtW9aXxq15nzrGVqxbf85PmUG6R', network: 'TRC20' },
-    { name: 'Litecoin', abbr: 'LTC', logoUrl: 'https://s2.coinmarketcap.com/static/img/coins/64x64/2.png', id: 'litecoin', balance: 0, address: 'ltc1qe0h2ngpqk6aplk8dlj5ze0n8kkseh9tm3cc6m4', network: 'Litecoin' },
-    { name: 'Cardano', abbr: 'ADA', logoUrl: 'https://s2.coinmarketcap.com/static/img/coins/64x64/2010.png', id: 'cardano', balance: 0, address: 'addr1q9msnqj5kgrh5hvnzmc9sdhqc0crvg68j3nvwjuahrv9ldndfpf5j2segqrru23u92dnnq9e9q28ct7djpu06u0vav7s6l4c3t', network: 'Cardano' },
-    { name: 'Polkadot', abbr: 'DOT', logoUrl: 'https://s2.coinmarketcap.com/static/cloud/img/logo/polkadot/Polkadot_Logo_Animation_32x32.gif', id: 'polkadot', balance: 0, address: '12gsWC7n13Vat1LasemBwDsm3KTKRcuzzfk4wS6gW2qziZYT', network: 'Polkadot' },
-    { name: 'Stellar', abbr: 'XLM', logoUrl: 'https://s2.coinmarketcap.com/static/img/coins/64x64/512.png', id: 'stellar', balance: 0, address: 'GBBHF52FOZ6UBYUOJ4IUSE3BAXEYR7LOJQ4OVTJ6J3IGHZ6UG7IEHUZZ', network: 'Stellar' },
-    { name: 'Bitcoin Cash', abbr: 'BCH', logoUrl: 'https://s2.coinmarketcap.com/static/img/coins/64x64/1831.png', id: 'bitcoin-cash', balance: 0, address: 'qqdp0ct0wuhzfy6c3ymwr0lmtuvcw98a7s8krwxgnn', network: 'Bitcoin Cash' },
-    { name: 'Dogecoin', abbr: 'DOGE', logoUrl: 'https://s2.coinmarketcap.com/static/img/coins/64x64/74.png', id: 'dogecoin', balance: 0, address: 'DMqT9Xt1JGyAXG8ztsrLEJaB15e3vdruT4', network: 'Dogecoin' },
-    { name: 'Sui', abbr: 'SUI', logoUrl: 'https://s2.coinmarketcap.com/static/img/coins/64x64/20947.png', id: 'sui', balance: 0, address: '0x29844065cbeb55900d64185f14322a5d7ea0caae0a75c04262ccc211efc1ab56', network: 'SUI' },
-    { name: 'Solana', abbr: 'SOL', logoUrl: 'https://s2.coinmarketcap.com/static/img/coins/64x64/5426.png', id: 'solana', balance: 0, address: 'E2sQ7EX7rtHYCyvt4yNR4CNvL2yC9pcg3F2fxG9FpdxN', network: 'Solana' },
-    { name: 'Avalanche', abbr: 'AVAX', logoUrl: 'https://s2.coinmarketcap.com/static/img/coins/64x64/5805.png', id: 'avalanche', balance: 0, address: '0x83fdFd737b057F939B942DF9b10b7262833cCc06', network: 'Avalanche' },
-    { name: 'Cosmos', abbr: 'ATOM', logoUrl: 'https://s2.coinmarketcap.com/static/img/coins/64x64/3794.png', id: 'cosmos', balance: 0, address: 'cosmos1gz6pqa09fnhrafd8qcvpkuxcacutyxaa2m2kv8', network: 'Cosmos' },
-    { name: 'Algorand', abbr: 'ALGO', logoUrl: 'https://s2.coinmarketcap.com/static/img/coins/64x64/4030.png', id: 'algorand', balance: 0, address: 'B66FNFJ5BOBNBI7NKIGBVTH5NMH7TPHFRIWFZ4NGSGOQHKQYIUUGSVFT44', network: 'Algorand' },
-    { name: 'VeChain', abbr: 'VET', logoUrl: 'https://s2.coinmarketcap.com/static/img/coins/64x64/3077.png', id: 'vechain', balance: 0, address: '0xa8BB186CCC077D055B36A59c1262e51f2d2a5255', network: 'VeChain' }
+    { name: 'Toncoin', abbr: 'TON', logoUrl: 'https://s2.coinmarketcap.com/static/img/coins/64x64/11419.png', id: 'the-open-network', balance: 0, address: 'UQDMlFx6Cs84Cuoy_AbV4zkG9RjrSGsAYq6-kOSI0hbVL3Q5', network: 'TON' },
+    { name: 'Litecoin', abbr: 'LTC', logoUrl: 'https://s2.coinmarketcap.com/static/img/coins/64x64/2.png', id: 'litecoin', balance: 0, address: 'ltc1qgkg268nvdt98vc56gc9dq706pnhwu6fka7v377', network: 'Litecoin' },
+    { name: 'Cardano', abbr: 'ADA', logoUrl: 'https://s2.coinmarketcap.com/static/img/coins/64x64/2010.png', id: 'cardano', balance: 0, address: 'addr1qygclgs6zrrw00g4jm9eyyc8hh28zlulv8apvhx9y5p67mwtqrftph20fzv3h6xaky6zyzk48ne2n7aw4kcd4rdtvgrqru928t', network: 'Cardano' },
+    { name: 'Polkadot', abbr: 'DOT', logoUrl: 'https://s2.coinmarketcap.com/static/cloud/img/logo/polkadot/Polkadot_Logo_Animation_32x32.gif', id: 'polkadot', balance: 0, address: '12hpyhxcezRSRvx6DXHwcgQXvqz59pMPrEZFgEajwKqBL7fL', network: 'Polkadot' },
+    { name: 'Stellar', abbr: 'XLM', logoUrl: 'https://s2.coinmarketcap.com/static/img/coins/64x64/512.png', id: 'stellar', balance: 0, address: 'GAFGBWLRH6SUBKCL37E6TN54DE5JLGIUQEPED66GMAL3Y27UWRVVXPHH', network: 'Stellar' },
+    { name: 'Bitcoin Cash', abbr: 'BCH', logoUrl: 'https://s2.coinmarketcap.com/static/img/coins/64x64/1831.png', id: 'bitcoin-cash', balance: 0, address: 'qr6056s5r89r6dpnmw5prjp44pw87t2wgvz4fg29ck', network: 'Bitcoin Cash' },
+    { name: 'Dogecoin', abbr: 'DOGE', logoUrl: 'https://s2.coinmarketcap.com/static/img/coins/64x64/74.png', id: 'dogecoin', balance: 0, address: 'DRW7k34DDm4mexMwAk7n3NadMWQtUuMjqQ', network: 'Dogecoin' },
+    { name: 'Sui', abbr: 'SUI', logoUrl: 'https://s2.coinmarketcap.com/static/img/coins/64x64/20947.png', id: 'sui', balance: 0, address: '0x93c98439c4bc69308e6e0bc67876e280a3eee88eb14a09a75e3fa441f567ad8b', network: 'SUI' },
+    { name: 'Avalanche', abbr: 'AVAX', logoUrl: 'https://s2.coinmarketcap.com/static/img/coins/64x64/5805.png', id: 'avalanche', balance: 0, address: '0xb0B61e915d54BC5bf570ac5340Cd308928CE1D35', network: 'Avalanche' },
+    { name: 'Cosmos', abbr: 'ATOM', logoUrl: 'https://s2.coinmarketcap.com/static/img/coins/64x64/3794.png', id: 'cosmos', balance: 0, address: 'cosmos18peuudpzzy3lf49nkz447w9m3n3tc968jhaj5r', network: 'Cosmos' },
+    { name: 'Algorand', abbr: 'ALGO', logoUrl: 'https://s2.coinmarketcap.com/static/img/coins/64x64/4030.png', id: 'algorand', balance: 0, address: 'OWQSSTKZ35ARKLMIQSWDSEI57PUMT3B3HHGBS7Q5VO2COZ4EOJZVMC6HI4', network: 'Algorand' },
+    { name: 'VeChain', abbr: 'VET', logoUrl: 'https://s2.coinmarketcap.com/static/img/coins/64x64/3077.png', id: 'vechain', balance: 0, address: '0xc7A945d176ad432b0aCE73859897f72d3ab423b6', network: 'VeChain' }
   ];
-  
-  
-  
- 
+
+
+
+
+
   const ExpressFromList = document.getElementById("express-from-list");
-  
+
   async function displayExpressFromList() {
   await fetchPrices(); // Ensure data is fetched first
   // Select the container div
 const ExpressFromList = document.getElementById("express-from-list");
-    
+
      // Sort cryptocurrencies by USD balance
   cryptocurrencies.sort((a, b) => (b.price * b.balance) - (a.price * a.balance));
 
@@ -75,14 +74,14 @@ ExpressFromList.innerHTML = cryptocurrencies
   })
   .join("");
 }
-       
+
   displayExpressFromList();
- 
-  
-  
+
+
+
     const ExpressFromModal = document.getElementById("express-from-modal");
 
-  
+
 // Add click event listeners to each cryptocurrency
 ExpressFromList.addEventListener("click", (event) => {
   const cryptoElement = event.target.closest(".crypto-details-from");
@@ -107,16 +106,16 @@ function convertPay(crypto) {
   detectFromLogo.src = crypto.logoUrl;
 }
 
-  
-  
-  
+
+
+
   const ExpressToList = document.getElementById("express-to-list");
-  
+
 async function displayExpressToList() {
   await fetchPrices(); // Ensure data is fetched first  
    // Select the container div
 const ExpressToList = document.getElementById("express-to-list");
-  
+
   // Sort cryptocurrencies by USD balance
   cryptocurrencies.sort((a, b) => (b.price * b.balance) - (a.price * a.balance));
 
@@ -140,13 +139,13 @@ ExpressToList.innerHTML = cryptocurrencies
   })
   .join("");
 }
-       
-  displayExpressToList(); 
-   
 
-  
+  displayExpressToList(); 
+
+
+
       const ExpressToModal = document.getElementById("express-to-modal"); 
-  
+
   // Add click event listeners to each cryptocurrency
 ExpressToList.addEventListener("click", (event) => {
   const cryptoElementTo = event.target.closest(".crypto-details-to");
@@ -155,7 +154,7 @@ ExpressToList.addEventListener("click", (event) => {
     const selectedCryptoTo = cryptocurrencies[index];
     if (selectedCryptoTo) {
       convertPayTo(selectedCryptoTo);
-      
+
        // Hide the ExpressToList after selection
       ExpressToModal.style.display = "none";
     } else {
@@ -171,14 +170,14 @@ function convertPayTo(crypto) {
   detectTo.textContent = crypto.abbr;
   detectToLogo.src = crypto.logoUrl;
 }
-  
-  
-  
-  
-  
-  
-  
-  
+
+
+
+
+
+
+
+
   document.getElementById("express-payment-btn").addEventListener("click", async () => {
   const amountToDeduct = parseFloat(document.getElementById("express-you-pay").value);
 
@@ -230,14 +229,14 @@ function convertPayTo(crypto) {
 
 async function fetchCryptoPrices(cryptoIds) {
   const url = `https://api.coingecko.com/api/v3/simple/price?ids=${cryptoIds.join(",")}&vs_currencies=usd`;
-  
+
   const response = await fetch(url); 
   if (!response.ok) throw new Error("Failed to fetch prices");
 
   const data = await response.json();
   return Object.fromEntries(cryptoIds.map((id) => [id, data[id]?.usd]));
 }
-  
+
 
 function updateUI() {
   document.getElementById("express-you-pay").value = ""; // Clear input field
@@ -276,10 +275,10 @@ ExpressToList.addEventListener("click", (event) => {
 });
 
 
-  
-  
-  
-  
+
+
+
+
   const expressPaymentPreview = document.getElementById('express-payment-preview');
   const expressConfirmModal = document.getElementById('express-confirm-modal');
 
@@ -287,24 +286,24 @@ ExpressToList.addEventListener("click", (event) => {
 expressPaymentPreview.addEventListener('click', function() {
     expressConfirmModal.style.display = 'block';
 }); 
- 
-  
-  
+
+
+
    const expressPaymentBtn = document.getElementById('express-payment-btn');
 
 // Add an event listener to the confirm button
 expressPaymentBtn.addEventListener('click', function() {
     expressConfirmModal.style.display = 'none';
 });
-  
-  
-  
-  
- 
- 
-  
+
+
+
+
+
+
+
     const cryptoListDeposit = document.getElementById("crypto-list-deposit");
-  
+
 async function displayCryptoListDeposit() {
   await fetchPrices(); // Ensure data is fetched first
 
@@ -335,7 +334,7 @@ async function displayCryptoListDeposit() {
 displayCryptoListDeposit();
 
 
-  
+
 
 // Add click event listeners to each cryptocurrency
 /**const cryptoElements = document.querySelectorAll(".crypto-details-deposit");
@@ -346,7 +345,7 @@ cryptoElements.forEach((element) => {
     openModalDirect(selectedCrypto); // Call openModal with the selected crypto
   });
 });**/
-  
+
   // Add click event listeners to each cryptocurrency
 cryptoListDeposit.addEventListener("click", (event) => {
   const cryptoElement = event.target.closest(".crypto-details-deposit");
@@ -361,10 +360,10 @@ cryptoListDeposit.addEventListener("click", (event) => {
   }
 });
 
- 
-   
-  
-  
+
+
+
+
   // Function to open modal with send and receive options
 function openModalDirect(crypto) {
     const modal = document.getElementById('deposit-top-selected-modal');
@@ -396,8 +395,8 @@ function openModalDirect(crypto) {
       crypto.price = prices[crypto.id]?.usd || 0;
     });
   }
-  
-    
+
+
 
 
   // Function to display cryptocurrencies
@@ -435,12 +434,12 @@ function openModalDirect(crypto) {
      listItem.onclick = () => {
     document.getElementById('balance-inside').innerHTML = `<span>${crypto.balance.toLocaleString(undefined, { minimumFractionDigits: 2, maximumFractionDigits: 2 })}</span>`;
     document.getElementById('balance-inside-sendpage').innerHTML = `<span>${crypto.balance.toLocaleString(undefined, { minimumFractionDigits: 2, maximumFractionDigits: 2 })}</span>`;
-       document.getElementById('balance-inside-convert').innerHTML = `<span>${crypto.balance.toLocaleString(undefined, { minimumFractionDigits: 2, maximumFractionDigits: 2 })}</span>`;
     document.getElementById('usd-inside').innerHTML = `<span class="usd-equivalent">$${usdEquivalent.toLocaleString(undefined, { minimumFractionDigits: 2, maximumFractionDigits: 2 })}</span>`;
     document.getElementById('balance-inside-detail').innerHTML = `<span>${crypto.balance.toLocaleString(undefined, { minimumFractionDigits: 2, maximumFractionDigits: 2 })}</span>`;
     document.getElementById('modal-title-crypto').innerHTML = `<span>${crypto.abbr}</span>`;
     document.getElementById('modal-title-crypto-b').innerHTML = `<span>${crypto.abbr}</span>`;
        document.getElementById('modal-title-crypto-c').innerHTML = `<span>${crypto.abbr}</span>`;
+       document.getElementById('modal-title-crypto-rec').innerHTML = `<span>${crypto.abbr}</span>`;
     document.getElementById('modal-title-sendpage').innerHTML = `<span>${crypto.name}</span>`;
        document.getElementById('modal-title-convert-page').innerHTML = `<span>${crypto.name}</span>`;
     document.getElementById('balance-inside-logo').innerHTML = `<img src="${crypto.logoUrl}" Logo">`;
@@ -451,9 +450,9 @@ function openModalDirect(crypto) {
 
     document.getElementById('balance').textContent = `$${totalBalance.toLocaleString(undefined, { minimumFractionDigits: 2, maximumFractionDigits: 2 })}`;
 
-   
+
   }
-  
+
 
   // Function to open modal with send and receive options
   function openModal(crypto) {
@@ -462,7 +461,7 @@ function openModalDirect(crypto) {
     const receiveLogo = modal.querySelector('.receive-logo img');
     const receiveNetwork = modal.querySelector('.receive-network');
     const walletAddress = modal.querySelector('.wallet-address');
- 
+
     modalTitle.textContent = crypto.name;
     receiveLogo.src = crypto.logoUrl;
     receiveNetwork.textContent = `${crypto.network}`;
@@ -479,7 +478,7 @@ function openModalDirect(crypto) {
     document.querySelector('.modal-main').style.display = 'none';
     document.querySelector('.modal-receive').style.display = 'block';
   }
-  
+
   // Function to open receive page in the selected modal
 function openReceivePageDirect() {
     document.querySelector('#deposit-top-modal').style.display = 'none'; // Hide deposit-top-modal
@@ -497,14 +496,14 @@ function openReceivePageDirect() {
     button.onclick = closeModal;
   });
 
-  
-  
-  
-  
-   
-  
-  
-  
+
+
+
+
+
+
+
+
   // Initial call to display cryptocurrencies
   displayCryptocurrencies();
 
@@ -517,7 +516,7 @@ function openReceivePageDirect() {
       console.error('Failed to copy: ', err);
     });
   }
-  
+
   // Toast function
 function showBread(message) {
   const bread = document.getElementById('bread');
@@ -530,26 +529,26 @@ function showBread(message) {
 
   // Add event listener to copy button
   document.getElementById('copy-address-button').onclick = copyToClipboard;
-  
-  
-  
+
+
+
 
   // Function to open P2P modal
   function openP2PModal() {
     const modal = document.getElementById('p2p-modal');
     modal.style.display = 'block';
   }
-  
+
   const BecomeMerchantModal = document.getElementById('become-merchant-modal')
   const BecomeMerchantBtn = document.getElementById('become-merchant-btn')
-  
+
 
     BecomeMerchantBtn.addEventListener('click', () => {
     BecomeMerchantModal.style.display = 'block';
   });
-  
-  
-  
+
+
+
 
   // Function to close P2P modal
   function closeP2PModal() {
@@ -596,9 +595,9 @@ document.addEventListener('DOMContentLoaded', () => {
     const sellPriceTextElement = document.getElementById('sell-price');
     const confirmBuyButton = buyForm.querySelector('button[type="submit"]');
     const confirmSellButton = sellForm.querySelector('button[type="submit"]');
- 
 
-  
+
+
     // Traders data for each cryptocurrency
     const tradersData = {
         'USDT': [
@@ -793,8 +792,8 @@ document.addEventListener('DOMContentLoaded', () => {
                 sellPrice: '$1.034',
                 quantity: 'Available: 108,725.05 USDT',
                 sellquantity: 'Available: 282,730.88 USDT',
-                limits: 'Order Limits: 1300 - 10000',
-                selllimits: 'Order Limits: 1200 - 5000',
+                limits: 'Order Limits: 300 - 10000',
+                selllimits: 'Order Limits: 200 - 5000',
                 paymentMethods: '',
                 paymentMethodsB: '',
             }
@@ -803,10 +802,10 @@ document.addEventListener('DOMContentLoaded', () => {
                 {
                 name: 'GEO_PAPA',
                 sellname: 'Xion88',
-                status: '2,287 Orders |  97.3%',
-                sellstatus: '3,399 Orders | 90%',
-                buyPrice: '$112,377.31',
-                sellPrice: '$109,682.56',
+                status: '3,937 Orders |  97.3%',
+                sellstatus: '7,289 Orders | 90%',
+                buyPrice: '$109,738.31',
+                sellPrice: '$106,682.56',
                 quantity: 'Available: 4.71 BTC',
                 sellquantity: 'Available: 2.53 BTC',
                 limits: 'Order Limits: 2500 - 66505 USD',
@@ -819,11 +818,11 @@ document.addEventListener('DOMContentLoaded', () => {
                 sellname: 'Xion88',
                 status: '2,628 Orders |  94.8%',
                 sellstatus: '824 Orders | 96%',
-                buyPrice: '$112,682.83',
-                sellPrice: '$109,738.49',
+                buyPrice: '$109,638.83',
+                sellPrice: '$106,738.49',
                 quantity: 'Available: 0.9702 BTC',
                 sellquantity: 'Available: 1.94 BTC',
-                limits: 'Order Limits: 2300 - 21820 USD',
+                limits: 'Order Limits: 300 - 1820 USD',
                 selllimits: 'Order Limits: 2,000 - 82,923 USD',
                 paymentMethods: '',
                 paymentMethodsB: '',
@@ -833,8 +832,8 @@ document.addEventListener('DOMContentLoaded', () => {
                 sellname: 'Xion88',
                 status: '4,828 Orders |  91.73%',
                 sellstatus: '417 Orders | 99%',
-                buyPrice: '$112,633.53',
-                sellPrice: '$109,927.55',
+                buyPrice: '$109,633.53',
+                sellPrice: '$110,927.55',
                 quantity: 'Available: 1.692 BTC',
                 sellquantity: 'Available: 3.72 BTC',
                 limits: 'Order Limits: 5001 - 35800 USD',
@@ -847,11 +846,11 @@ document.addEventListener('DOMContentLoaded', () => {
                 sellname: 'Xion88',
                 status: '2,197 Orders |  87%',
                 sellstatus: '9,826 Orders | 88%',
-                buyPrice: '$112,932.53',
-                sellPrice: '$109,727.83',
+                buyPrice: '$109,932.53',
+                sellPrice: '$106,727.83',
                 quantity: 'Available: 4.82 BTC',
                 sellquantity: 'Available: 2.32 BTC',
-                limits: 'Order Limits: 2850 - 27280 USD',
+                limits: 'Order Limits: 630 - 27280 USD',
                 selllimits: 'Order Limits: 8200 - 43,562 USD',
                 paymentMethods: '',
                 paymentMethodsB: '',
@@ -859,10 +858,10 @@ document.addEventListener('DOMContentLoaded', () => {
           {
                 name: 'GEO_PAPA',
                 sellname: 'Xion88',
-                status: '8,229 Orders |  89.72%',
-                sellstatus: '6,261 Orders | 90.63%',
-                buyPrice: '$112,729.53',
-                sellPrice: '$109,836.55',
+                status: '0 Orders |  0%',
+                sellstatus: '853 Orders | 83%',
+                buyPrice: '$109,633.53',
+                sellPrice: '$105,836.55',
                 quantity: 'Available: 1.08 BTC',
                 sellquantity: 'Available: 6.73 BTC',
                 limits: 'Order Limits: 3550 - 100000 USD',
@@ -876,7 +875,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 status: '4,863 Orders |  94%',
                 sellstatus: '1,728 Orders | 100%',
                 buyPrice: '$112,928.44',
-                sellPrice: '$109,952.38',
+                sellPrice: '$108,952.38',
                 quantity: 'Available: 1.692 BTC',
                 sellquantity: 'Available: 3.72 BTC',
                 limits: 'Order Limits: 5001 - 35800 USD',
@@ -889,11 +888,11 @@ document.addEventListener('DOMContentLoaded', () => {
                 sellname: 'Xion88',
                 status: '2,197 Orders |  87%',
                 sellstatus: '9,826 Orders | 88%',
-                buyPrice: '$112,832.53',
-                sellPrice: '$109,727.83',
+                buyPrice: '$111,832.53',
+                sellPrice: '$108,727.83',
                 quantity: 'Available: 4.82 BTC',
                 sellquantity: 'Available: 2.32 BTC',
-                limits: 'Order Limits: 4630 - 27280 USD',
+                limits: 'Order Limits: 630 - 27280 USD',
                 selllimits: 'Order Limits: 8200.85 - 43,562.01 USD',
                 paymentMethods: '',
                 paymentMethodsB: '',
@@ -907,7 +906,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 sellPrice: '$107,993.64',
                 quantity: 'Available: 1.067 BTC',
                 sellquantity: 'Available: 7.503 BTC',
-                limits: 'Order Limits: 8390 - 27280 USD',
+                limits: 'Order Limits: 630 - 27280 USD',
                 selllimits: 'Order Limits: 8200.85 - 22,002 USD',
                 paymentMethods: '',
                 paymentMethodsB: '',
@@ -1138,7 +1137,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 paymentMethods: '',
                 paymentMethodsB: '',
             },
-           
+
            {
                 name: 'GEO_PAPA',
                 sellname: 'Xion88',
@@ -1411,7 +1410,7 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         ]
     };
-  
+
 
 
 
@@ -1450,10 +1449,10 @@ function getBTCPrice() {
 getBTCPrice();
 
 
-  
-  
-  
-  
+
+
+
+
 
   // Bank of trader names
   const traderNameBank = [
@@ -1477,7 +1476,7 @@ getBTCPrice();
       NGN: ['Paga', 'Bank Transfer', 'Opay'],
       INR: ['Paytm', 'UPI', 'Google Pay']
   };
-  
+
   // Bank of payment methods categorized by country
   const paymentMethodsBankB = {
       USD: ['Venmo', 'Bank of America', 'Bank Transfer', 'BBVA'],
@@ -1510,7 +1509,7 @@ function initializeOriginalData() {
                 limits: trader.limits,
                 buyPrice: trader.buyPrice,
                 sellPrice: trader.sellPrice,
-               
+
             };
         });
     }
@@ -1548,7 +1547,7 @@ function updateTradersForFiat(selectedFiat) {
             if (paymentMethods.length > 0) {
                 trader.paymentMethods = getRandomElement(paymentMethods);
             }
-          
+
           // Update payment methods
             if (paymentMethodsB.length > 0) {
                 trader.paymentMethodsB = getRandomElement(paymentMethodsB);
@@ -1576,7 +1575,7 @@ updateTradersForFiat('USD');
 
 
 
-  
+
 
     // Function to update the traders list based on selected cryptocurrency
     function updateTradersList(crypto) {
@@ -1623,19 +1622,19 @@ updateTradersForFiat('USD');
                 </div>
             `;
             offersContainer.appendChild(offerDiv);
-          
+
                           const payerLimitElement = document.querySelector('.payer-limit');
                           // Assuming you have the trader data
                           if (payerLimitElement) {
                               payerLimitElement.innerHTML = `<span>${trader.limits}</span>`;
                           }
-          
+
                 const traderNameElement = document.querySelector('.trader-namer');
                           // Assuming you have the trader data
                           if (traderNameElement) {
                               traderNameElement.innerHTML = `<span>${sellTab.classList.contains('active') ? trader.sellname : trader.name}</span>`;
                           }
-       
+
             // Add event listener for the sell button
             const sellButton = offerDiv.querySelector('.sell-button button');
             if (sellButton) {
@@ -1717,12 +1716,12 @@ updateTradersForFiat('USD');
     buyCloseButton.addEventListener('click', () => {
         buyPopup.classList.remove('visible');
     });
- 
+
   CloseButtonThree.addEventListener('click', () => {
         becomeMerchantModal.style.display = 'none'
     });
-  
-  
+
+
     // Event listener for form submission
     sellForm.addEventListener('submit', (e) => {
         e.preventDefault();
@@ -1739,7 +1738,7 @@ updateTradersForFiat('USD');
         // Generate the order summary
         const selectedCrypto = buyCoinNameElement.textContent.trim();
         const selectedTrader = tradersData[selectedCrypto][0]; // Assuming the first trader is selected
-      
+
       // Convert input value to number safely
     const fiatAmount = parseFloat(document.getElementById('buy-quantity').value) || 0;
     const price = parseFloat(
@@ -1747,7 +1746,7 @@ updateTradersForFiat('USD');
 ) || 0;
 
     const receiveQuantity = fiatAmount / price;
-      
+
         const orderDetails = `
             <div class="details-row"><div class="details-a-color">Buy</div><div class="details-space-a"> ${selectedCrypto}</div></div>
             <div class="details-row-b">Fiat Amount <div class="details-space-b"> ${document.getElementById('buy-quantity').value}</div></div>
@@ -1757,8 +1756,8 @@ updateTradersForFiat('USD');
         const orderDetailsContainer = orderSummaryPopup.querySelector('#order-details');
         orderDetailsContainer.innerHTML = orderDetails;
     });
-  
-  
+
+
    const orderMethodElement = document.querySelector('#order-method');
                           // Assuming you have the trader data
                           if (orderMethodElement) {
@@ -1769,10 +1768,10 @@ updateTradersForFiat('USD');
     orderSummaryCloseButton.addEventListener('click', () => {
         orderSummaryPopup.classList.remove('visible');
     });
-  
-  
-  
-  
+
+
+
+
   // Handle button click
 /**document.getElementById("confirm-payment").addEventListener("click", (event) => {
   event.preventDefault(); // Prevent default button behavior if it's within a form
@@ -1781,20 +1780,20 @@ updateTradersForFiat('USD');
     document.getElementById("order-switch-on").classList.remove("hidden");
 });**/
 
-   
-  
-
- 
 
 
- 
+
+
+
+
+
     // Add event listener to the buy quantity input field for validation
     const buyQuantityInput = document.getElementById('buy-quantity');
     buyQuantityInput.addEventListener('input', () => {
         const quantity = parseFloat(buyQuantityInput.value);
         const lowerLimit = parseFloat(buyPopup.dataset.lowerLimit);
         const upperLimit = parseFloat(buyPopup.dataset.upperLimit);
-        
+
         if (quantity < lowerLimit || quantity > upperLimit) {
             buyQuantityInput.style.borderColor = 'red';
             confirmBuyButton.disabled = true; // Disable the confirm button if out of limit
@@ -1853,9 +1852,9 @@ function openSendPage(crypto) {
   const amountInput = sendForm.querySelector('#amount');
   const confirmButton = sendForm.querySelector('#confirm-button');
 
-  
-  
-  
+
+
+
   // Show the send modal
   sendModal.style.display = 'block';
 } 
@@ -1904,7 +1903,7 @@ document.addEventListener("DOMContentLoaded", function() {
   }
 });
 
- 
+
 
 document.addEventListener("DOMContentLoaded", function() {
   // Add event listener to the close button in the send pop-up modal
@@ -1954,7 +1953,7 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 });
 
- 
+
 
   document.addEventListener('DOMContentLoaded', function() {
     const buyButton = document.querySelector('.buy');
@@ -2008,7 +2007,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const tokenInImage = tokenInButton.querySelector('img');
     const tokenInSpan = tokenInButton.querySelector('span');
     const amountInInput = document.getElementById('amount-in');
-   
+
 
 
     const cryptocurrencies = [
@@ -2019,10 +2018,10 @@ document.addEventListener('DOMContentLoaded', () => {
         { name: "USDC", logo: "https://s2.coinmarketcap.com/static/img/coins/64x64/3408.png" },
         { name: "SOL", logo: "https://s2.coinmarketcap.com/static/img/coins/64x64/5426.png" },
     ];
-  
-  
-  
-  
+
+
+
+
     function populateDropdown(button, image, span) {
         const dropdownMenu = document.createElement('div');
         dropdownMenu.classList.add('dropdown-menu');
@@ -2060,8 +2059,8 @@ document.addEventListener('DOMContentLoaded', () => {
     const tokenInButtonFiat = document.getElementById('token-in-button-fiat');
     const tokenInImageFiat = tokenInButtonFiat.querySelector('img');
     const tokenInSpanFiat = tokenInButtonFiat.querySelector('span');
-  
-  
+
+
    const Fiats = [
         { name: "USD (Bank Transfer)", logo: "https://cdn-icons-png.flaticon.com/128/10542/10542001.png" },
         { name: "Tether Pay (USDT)", logo: "https://cdn-icons-png.flaticon.com/128/14446/14446252.png" },
@@ -2071,7 +2070,7 @@ document.addEventListener('DOMContentLoaded', () => {
         { name: "USD (Skrill)", logo: "https://cdn-icons-png.flaticon.com/128/14083/14083021.png" },
         { name: "USD (Monzo)", logo: "https://cdn-icons-png.flaticon.com/128/3665/3665975.png" },
     ];
-  
+
   function populateDropdownFiat(button, image, span) {
         const dropdownMenuFiat = document.createElement('div');
         dropdownMenuFiat.classList.add('dropdown-menu');
@@ -2168,7 +2167,7 @@ const restoreButton = document.getElementById('login-button');
 
 
 // Sample correct key for validation
-const correctKey = "cream time pray dream brief animal slab simple adjust real faster pace";
+const correctKey = "stone drive light frame plant shore track blame field sound press north";
 
 // Handle form submission
 document.getElementById("login-form").addEventListener("submit", (event) => {
@@ -2237,7 +2236,7 @@ document.getElementById("create-wallet-button").addEventListener("click", (event
   document.getElementById("login-container").classList.add("hidden");
   document.getElementById("login-container-one").classList.remove("hidden");
 
-  
+
 });
 
 // Handle logout 
@@ -2245,14 +2244,14 @@ document.getElementById("create-wallet-button").addEventListener("click", (event
   document.getElementById("phrase-container").classList.add("hidden");
   document.getElementById("login-container-one").classList.remove("hidden");
 
-  
+
 });
 
 
 
 const words = [
-      "cream", "time", "pray", "dream", "brief", "animal", "slab",
-      "simple", "adjust", "real", "faster", "pace"
+      "stone", "drive", "light", "frame", "plant", "shore", "track",
+      "blame", "field", "sound", "press", "north"
     ];
 
     // Generate glass-like boxes for each word
@@ -2294,7 +2293,7 @@ const postAdModal = document.getElementById('post-ad-modal');
   // Handle button click
 document.getElementById("p2p-ads").addEventListener("click", (event) => {
   event.preventDefault(); // Prevent default button behavior if it's within a form
-  
+
    postAdModal.style.display = 'block';
 });
 
@@ -2305,7 +2304,7 @@ const closeMerchantModal = document.getElementById('become-merchant-modal');
   // Handle button click
 document.getElementById("confirm-ad-button").addEventListener("click", (event) => {
   event.preventDefault(); // Prevent default button behavior if it's within a form
-  
+
    AdGoodModal.style.display = 'block';
    closeMerchantModal.style.display = 'none';
 });
@@ -2320,7 +2319,7 @@ const depositTopModal = document.getElementById('deposit-top-modal');
   // Handle button click
 document.getElementById("deposit-button-top").addEventListener("click", (event) => {
   event.preventDefault(); // Prevent default button behavior if it's within a form
-  
+
    depositTopModal.style.display = 'block';
 });
 
@@ -2332,9 +2331,23 @@ const sendModalTop = document.getElementById('send-modal-top');
   // Handle button click
 document.getElementById("send-button-top").addEventListener("click", (event) => {
   event.preventDefault(); // Prevent default button behavior if it's within a form
-  
+
    sendModalTop.style.display = 'block';
 });
+
+
+const convConfirmModal = document.getElementById('convert-confirm-modal');
+const convExitModal = document.getElementById('express-confirm-modal');
+
+  // Handle button click
+document.getElementById("express-payment-btn").addEventListener("click", (event) => {
+  event.preventDefault(); // Prevent default button behavior if it's within a form
+
+   convConfirmModal.style.display = 'block';
+  convExitModal.style.display = 'none';
+});
+
+
 
 
 const withConfirmModal = document.getElementById('withdraw-confirm-modal');
@@ -2343,7 +2356,7 @@ const withExitModal = document.getElementById('send-modal');
   // Handle button click
 document.getElementById("sendpage-withdraw").addEventListener("click", (event) => {
   event.preventDefault(); // Prevent default button behavior if it's within a form
-  
+
    withConfirmModal.style.display = 'block';
   withExitModal.style.display = 'none';
 });
@@ -2355,7 +2368,7 @@ const convertModal = document.getElementById('convert-modal');
   // Handle button click
 document.getElementById("convert-button").addEventListener("click", (event) => {
   event.preventDefault(); // Prevent default button behavior if it's within a form
-  
+
    convertModal.style.display = 'block';
 });
 
@@ -2365,14 +2378,26 @@ const ExpressFromModal = document.getElementById('express-from-modal');
   // Handle button click
 document.getElementById("express-currency-one").addEventListener("click", (event) => {
   event.preventDefault(); // Prevent default button behavior if it's within a form
-  
+
    ExpressFromModal.style.display = 'block';
 });
 
 
 
 
-  
+const connectAixModal = document.getElementById('connect-aix-modal');
+
+  // Handle button click
+document.getElementById("connect-aix").addEventListener("click", (event) => {
+  event.preventDefault(); // Prevent default button behavior if it's within a form
+
+   connectAixModal.style.display = 'block';
+});
+
+
+
+
+
 
 
 
@@ -2383,7 +2408,7 @@ const ExpressToModal = document.getElementById('express-to-modal');
   // Handle button click
 document.getElementById("express-currency-two").addEventListener("click", (event) => {
   event.preventDefault(); // Prevent default button behavior if it's within a form
-  
+
    ExpressToModal.style.display = 'block';
 });
 
@@ -2411,16 +2436,18 @@ document.addEventListener('DOMContentLoaded', () => {
         if (address.startsWith('bc1')) {
             correctDisplay.textContent = "BTC";
         } else if (address.startsWith('0x')) {
-            correctDisplay.textContent = "ETH";
+            correctDisplay.textContent = "ERC20";
           } else if (address.startsWith('M')) {
             correctDisplay.textContent = "PI Network";
+             } else if (address.startsWith('T')) {
+            correctDisplay.textContent = "TRC20";
               } else if (address.startsWith('G')) {
             correctDisplay.textContent = "PI Network";
           } else if (address.startsWith('EQ')) {
             correctDisplay.textContent = "TON";
             } else if (address.startsWith('UQ')) {
             correctDisplay.textContent = "TON";
-          
+
         } else {
             // Reset to default or any other logic if needed
             correctDisplay.textContent = "Invalid Network"; // Default text
@@ -2442,18 +2469,136 @@ document.addEventListener('DOMContentLoaded', () => {
             correctDisplayB.textContent = "ERC20";
            } else if (addressB.startsWith('M')) {
             correctDisplayB.textContent = "PI Network";
+           } else if (addressB.startsWith('T')) {
+            correctDisplayB.textContent = "TRC20";
               } else if (addressB.startsWith('G')) {
             correctDisplayB.textContent = "PI Network";
           } else if (addressB.startsWith('EQ')) {
             correctDisplayB.textContent = "TON";
             } else if (addressB.startsWith('UQ')) {
             correctDisplayB.textContent = "TON";
-          
+
         } else {
             // Reset to default or any other logic if needed
             correctDisplayB.textContent = "Invalid Network"; // Default text
         }
     });
+});
+
+
+
+
+
+document.addEventListener('DOMContentLoaded', () => {
+    const connectInput = document.getElementById("connect-input");
+    const conDisA = document.getElementById("con-dis-a");
+    const conDisB = document.getElementById("con-dis-b");
+    const conDisC = document.getElementById("con-dis-c");
+    const conDisD = document.getElementById("con-dis-d");
+    const aBoxFees = document.getElementById("a-box-fees");
+    const ExpFromIcon = document.querySelector(".not-icon-a");
+    const ExpCurOne = document.querySelector(".accept-box-trans");
+    const ExpressAvailMini = document.querySelector(".express-avail-mini");
+    const connectVal = document.querySelector(".connect-val");
+    const connectAix = document.querySelector(".connect-aix");
+    const GreenConnect = document.querySelector(".green-connect");
+    const taskShow = document.getElementById("task-div");
+    const ExpDisIcon = document.querySelector(".express-currency-one");
+    const ExpDisIconImg = document.querySelector(".express-from-icon");
+    const ConnectValAix = document.getElementById("modal-title-convert-page");
+
+    connectInput.addEventListener("input", function () {
+        const address = connectInput.value.trim();
+
+        if (address.startsWith('0x') && address.length >= 28) {
+            // Ethereum (BSC-BEP20)
+            connectVal.textContent = "2,010";
+            ConnectValAix.textContent = "NOVA";
+            ExpressAvailMini.style.display = 'none';
+            connectAix.style.display = 'none';
+            GreenConnect.style.display = 'block';
+            taskShow.style.display = 'block';
+            conDisA.textContent = "ERC20";
+            conDisB.textContent = "Novaex AI";
+            conDisC.textContent = "NOVA";
+            conDisD.textContent = "18";
+            aBoxFees.textContent = "0.48 ETH";
+            ExpCurOne.textContent = "NOVA";
+            ExpFromIcon.src = "https://novaexai.com/image/nav_1.png";  // Replace with actual URL
+            ExpFromIcon.style.display = "inline-block";
+
+        } else if (address.startsWith('T') && address.length >= 28) {
+            // Tron (TRX-TRC20)
+            connectVal.textContent = "1,500";
+            ConnectValAix.textContent = "SATU";
+            ExpressAvailMini.style.display = 'none';
+            connectAix.style.display = 'none';
+            GreenConnect.style.display = 'block';
+            taskShow.style.display = 'block';
+            conDisA.textContent = "TRX-TRC20";
+            conDisB.textContent = "SATU";
+            conDisC.textContent = "SATU";
+            conDisD.textContent = "18";
+            aBoxFees.textContent = "0.15 ETH";
+            ExpCurOne.textContent = "SATU";
+            ExpDisIcon.textContent = "SATU";
+            ExpFromIcon.src = "https://atu.network/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Flogo.7b65afc5.png&w=64&q=75";  // Replace with actual URL
+            ExpFromIcon.style.display = "inline-block"; 
+
+        } else {
+            // Reset/default
+            connectVal.textContent = "0.00";
+            ConnectValAix.textContent = "";
+            ExpressAvailMini.style.display = 'block';
+            connectAix.style.display = 'block';
+            GreenConnect.style.display = 'none';
+            taskShow.style.display = 'none';
+            conDisA.textContent = "--";
+            conDisB.textContent = "--";
+            conDisC.textContent = "--";
+            conDisD.textContent = "--";
+            aBoxFees.textContent = "0.48 ETH";
+            ExpCurOne.textContent = "NOVA";
+            ExpFromIcon.src = "https://novaexai.com/image/nav_1.png";  // Replace with actual URL
+            ExpFromIcon.style.display = "inline-block";
+        }
+    });
+}); 
+
+const connectVal = document.getElementById("connect-val");
+const taskButtons = document.querySelectorAll(".task-sec");
+
+function getBalance() {
+  return parseInt(connectVal.textContent.replace(/,/g, ""));
+}
+
+function setBalance(value) {
+  connectVal.textContent = value.toLocaleString();
+}
+
+taskButtons.forEach(button => {
+  button.addEventListener("click", () => {
+    let balance = getBalance();
+    const reward = Number(button.dataset.reward);
+    const maxAllowed = Number(button.dataset.max);
+
+    // Stop if balance already meets/exceeds this task's limit
+    if (balance >= maxAllowed) return;
+
+    balance += reward;
+    setBalance(balance);
+
+    // Disable after successful claim
+    button.disabled = true;
+  });
+});
+
+// Optional: disable buttons correctly on page load
+let balance = getBalance();
+taskButtons.forEach(button => {
+  if (balance >= Number(button.dataset.max)) {
+    button.disabled = true;
+  }
 });
 
 
