@@ -21,8 +21,8 @@
       width: 100%; /* Visible area width */
       height: 150px; /* Height of one text line */
       overflow: hidden;
+      max-width: 500px;
       position: absolute;
-      max-width: 400px;
       text-align: center;
       left: 0px;
       bottom: 25%;
@@ -40,15 +40,15 @@
       font-weight: bold;
       color: #000;
       text-align: center;
-      margin-left: 11%;
+      margin-left: 11%; 
       margin-right: 15%;
     }
 
     @keyframes slide-horizontal {
-      0%, 20% { transform: translateX(10px); }
+      0%, 20% { transform: translateX(40px); }
       33%, 53% { transform: translateX(-390px); }
       66%, 86% { transform: translateX(-800px); }
-      100% { transform: translateX(-1200px); }
+      100% { transform: translateX(-1210px); }
     }
 
 
@@ -64,8 +64,8 @@
   
     .slider-container {
       width: 100%;
-      max-width: 400px;
       height: 250px;
+      max-width: 500px;
       position: absolute;
       left: 0px;
       overflow: hidden;
@@ -79,7 +79,7 @@
     }
 
     .slider-track img {
-      width: 400px; /* Match container width */
+      width: 500px; /* Match container width */
       height: 250px; /* Match container height */
       object-fit: cover;
       margin-left: 10%;
@@ -87,10 +87,10 @@
     }
 
 @keyframes slide {
-      0%, 20% { transform: translateX(30px); }
-      33%, 53% { transform: translateX(-303px); }
-      66%, 86% { transform: translateX(-622px); }
-      100% { transform: translateX(-955px); }
+      0%, 20% { transform: translateX(50px); }
+      33%, 53% { transform: translateX(-400px); }
+      66%, 86% { transform: translateX(-830px); }
+      100% { transform: translateX(-1180px); }
     }
 
  
