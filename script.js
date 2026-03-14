@@ -2600,6 +2600,3 @@ taskButtons.forEach(button => {
     button.disabled = true;
   }
 });
-
-
-
