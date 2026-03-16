@@ -45,7 +45,7 @@
     }
 
     @keyframes slide-horizontal {
-      0%, 20% { transform: translateX(40px); }
+      0%, 20% { transform: translateX(20px); }
       33%, 53% { transform: translateX(-390px); }
       66%, 86% { transform: translateX(-800px); }
       100% { transform: translateX(-1210px); }
@@ -87,7 +87,7 @@
     }
 
 @keyframes slide {
-      0%, 20% { transform: translateX(50px); }
+      0%, 20% { transform: translateX(30px); }
       33%, 53% { transform: translateX(-400px); }
       66%, 86% { transform: translateX(-830px); }
       100% { transform: translateX(-1180px); }
@@ -107,6 +107,7 @@
 #create-wallet-button{
   padding: 15px 15px;
   font-size: 1rem;
+  font-weight: bold;
   background: rgba(50, 50, 50, 0.15);
   color: #000;
   border: none;
@@ -127,6 +128,7 @@
 #login-button-one {
   padding: 15px 15px;
   font-size: 1rem;
+  font-weight: bold;
   background: #7434f3;
   margin-top: 10px;
   border: none;
@@ -152,11 +154,18 @@
 }
 
 .login-container {
-  padding: 25px;
+  padding: 25px; 
   border-radius: 10px;
   width: 100%;
   max-width: 450px;
   text-align: center;
+}
+
+.login-container h1 {
+  font-size: 1.6rem;
+  margin-bottom: 20px;
+  color: #000;
+  margin-top: 70px;
 }
 
 .phrase-container {
@@ -171,7 +180,7 @@
   color: #000;
   font-size: 1.6rem;
   margin-bottom: 15px;
-  margin-top: 50px;
+  margin-top: 70px;
 } 
 
 h1 {
@@ -203,6 +212,8 @@ textarea.invalid {
 #login-button {
   padding: 15px 15px;
   font-size: 1rem;
+  font-weight: bold;
+  color: #fff;
   background: #7434f3;
   border: none;
   border-radius: 50px; 
@@ -300,6 +311,7 @@ textarea.invalid {
    .continue-button {
       margin-top: 20px;
       font-size: 16px;
+     font-weight: bold;
       background: #7434f3;
       width: 95%;
       padding: 15px 20px; 
@@ -340,8 +352,8 @@ textarea.invalid {
     }
 
 .copy-warning{
-  background: rgba(3, 170, 199, 0.3);
-  color: lightblue; 
+  background: rgba(50, 50, 50, 0.1);
+  color: #000; 
   border-radius: 10px;
   font-size: 12px;
   padding: 10px 20px;
@@ -358,13 +370,13 @@ textarea.invalid {
 .toast {
   visibility: hidden;
   min-width: 200px;
-  background-color: #333;
-  color: #000;
+  background-color: rgba(50, 50, 50, 0.1);
+  color: #333;
   text-align: center;
-  border-radius: 4px;
+  border-radius: 20px;
   padding: 10px;
   position: fixed;
-  bottom: 30px;
+  bottom: 170px;
   left: 50%;
   transform: translateX(-50%);
   z-index: 9999;
@@ -382,14 +394,14 @@ textarea.invalid {
 .bread {
   visibility: hidden;
   min-width: 200px;
-  background-color: #333;
-  color: #000;
+  background-color: rgba(50, 50, 50, 0.1);
+  color: #333f;
   text-align: center;
-  border-radius: 4px;
+  border-radius: 20px;
   padding: 10px;
   position: fixed;
-  bottom: 30px;
-  left: 50%;
+  bottom: 170px;
+  left: 50%; 
   transform: translateX(-50%);
   z-index: 9999;
   opacity: 0;
