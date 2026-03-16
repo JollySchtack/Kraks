@@ -839,6 +839,9 @@ body {
   border: none;
   margin: 2px;
   cursor: pointer;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
 }
 
 .button-top-icon{
