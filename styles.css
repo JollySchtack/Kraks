@@ -541,7 +541,7 @@ body {
   margin: 10px;
   cursor: pointer;
   width: 95%;
-  box-shadow: 0 4px 12px rgba(116, 52, 243, 0.4);
+  box-shadow: 0 4px 12px rgba(50, 50, 50, 0.3);
 }  
  
 .crypto-item:hover { 
