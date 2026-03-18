@@ -11,11 +11,6 @@
 
 
 
-      
-
-
-     
-
 
       .text-slider-container {
       width: 100%; /* Visible area width */
@@ -1668,14 +1663,14 @@ close-button-three:hover,
   margin-bottom: 5px;
   margin-top: 20px;
   font-size: 14px;
-  color: grey;
+  color: #000;
 }
 
 .send-page-label-two{
   font-weight: bold;
   margin-top: 30px;
   font-size: 14px;
-  color: grey;
+  color: #000;
 }
 
 .send-form {
@@ -3066,7 +3061,7 @@ footer {
 
 .sendpage-withdraw {
   background-color: #7434f3;
-  color: black;
+  color: #fff;
   width: 95%;
   border: none;
   margin: 10px;
@@ -3183,7 +3178,6 @@ footer {
     flex-direction: column;
     padding-bottom: 20px;
     background: #fff;
-    box-shadow: 0 4px 12px rgba(50, 50, 50, 0.2);
 }
  
 .express-you-pay-label {
@@ -3277,7 +3271,8 @@ footer {
   padding-top: 40px;
   padding-left: 180px;
   padding-right: 20px;
-  font-size: 25px;
+  font-size: 25px;background: #fff;
+  box-shadow: 0 4px 12px rgba(50, 50, 50, 0.2);
 }
 
 #express-you-pay{
@@ -3285,6 +3280,8 @@ footer {
   padding-left: 180px;
   padding-right: 20px;
   font-size: 25px;
+  background: #fff;
+  box-shadow: 0 4px 12px rgba(50, 50, 50, 0.2);
 }
 
 
@@ -4022,7 +4019,6 @@ footer {
   text-align: left;
   padding: 5px;
   margin-top: 15px;
-  background-color: rgba(50, 50, 50, 0.2);
 }
 
 .con-aix-header{
@@ -4035,7 +4031,7 @@ footer {
 }
 
 .con-aix-net{
-  background-color: rgba(50, 50, 50, 0.5);
+  background-color: rgba(50, 50, 50, 0.2);
   border-radius: 10px;
   padding: 15px;
   width: 98%;
