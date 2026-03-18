@@ -3157,7 +3157,7 @@ footer {
   font-size: 12px;
   padding: 2px;
   color: #fff;
-  background-color: rgba(50, 50, 50, 0.5);
+  background-color: #fff;
   border-radius: 5px;
   box-shadow: 0 4px 12px rgba(50, 50, 50, 0.2);
 }
