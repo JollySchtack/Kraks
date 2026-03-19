@@ -11,15 +11,21 @@
  </head>  
 <body>
 
-  <script>
-    window.addEventListener("DOMContentLoaded", function () {
-      const tg = window.Telegram.WebApp;
+<script>
+  window.addEventListener("DOMContentLoaded", function () {
+    const tg = window.Telegram.WebApp;
 
-      tg.ready();
-      tg.setHeaderColor("bg_color");
-    });
-  </script>
+    tg.ready();
 
+    if (tg.isVersionAtLeast("8.0")) {
+      tg.requestFullscreen();
+    } else {
+      tg.expand();
+    }
+
+    tg.setHeaderColor("#ffffff");
+  });
+</script>
   
     <div id="login-container-one" class="login-container-one"> 
      <img src="https://brandlogos.net/wp-content/uploads/2025/05/kraken-logo_brandlogos.net_ftc8y.png" alt="BTC" class="binance-icon-a">
