@@ -244,7 +244,7 @@ textarea.invalid {
 #out-button{
   position: absolute;
   left: 2.5%;
-  top: 110px;
+  top: 120px;
   cursor: pointer;
   width: 20px;
 }
@@ -260,7 +260,7 @@ textarea.invalid {
 #out-button-two{
   position: absolute;
   left: 2.5%;
-  top: 110px;
+  top: 120px;
   cursor: pointer;
 }
 
@@ -2393,8 +2393,8 @@ footer {
 
 .wallet-label{
   position: absolute;
-  left: 80px;
-  top: 50px;
+  left: 145px;
+  top: 52.5px;
   color: #000;
   font-size: 18px;
   font-weight: bold;
@@ -2403,19 +2403,19 @@ footer {
 .binance-icon{
   width: 55px;
   position: absolute;
-  left: 15px;
+  left: 90px;
 }
 
 .binance-icon-a{
   width: 140px;
   text-align: center;
-  padding-top: 20px;
+  padding-top: 30px;
 }
 
 .binance-icon-phrase{
   width: 55px;
   text-align: center;
-  padding-top: 20px;
+  padding-top: 30px;
 }
 
 .binance-logo-back{
@@ -2423,7 +2423,7 @@ footer {
   height: 50px;
   width: 100%;
   position: absolute;
-  right
+  
 }
 
 .binance-icon-two{
