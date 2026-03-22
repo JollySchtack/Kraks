@@ -814,7 +814,7 @@ body {
 
 .p-close-button{
   position: fixed; 
-  top: 8%;
+  top: 9%;
   cursor: pointer;
   padding-top: 23px;
   padding-right: 20px;
@@ -823,7 +823,7 @@ body {
 
 .p-close-button-b{
   position: fixed; 
-  top: 8%;
+  top: 9%;
   left: 0;
   cursor: pointer;
   padding-top: 23px;
@@ -2391,9 +2391,13 @@ footer {
   cursor: pointer;
 }
 
+#deposit-top-modal{
+  padding-top: ;
+}
+
 .wallet-label{
   position: absolute;
-  left: 145px;
+  left: 155px;
   top: 52.5px;
   color: #000;
   font-size: 16px;
@@ -2403,7 +2407,7 @@ footer {
 .binance-icon{
   width: 50px;
   position: absolute;
-  left: 95px;
+  left: 105px;
 }
 
 .binance-icon-a{
@@ -3754,7 +3758,7 @@ footer {
 
 .p-close-button-z{
   position: absolute; 
-  top: 80px;
+  top: 9%;
   left: 15px;
   color: #000;
   cursor: pointer;
