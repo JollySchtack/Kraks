@@ -620,7 +620,7 @@ body {
 
 #crypto-list-deposit{
   padding-left: 5px;
-  margin-top: 50px;
+  margin-top: 110px;
 }
 
 
@@ -783,7 +783,7 @@ body {
 .receive-title {
   font-size: 16px;
   margin-bottom: 20px;
-  margin-top: 20px;
+  margin-top: 40px;
   font-weight: bold;
 }
 
@@ -804,19 +804,19 @@ body {
   font-size: 18px;
   font-weight: bold;
   position: fixed;
-  top: 0%;
+  top: 0px;
   margin-left: 30px;
   padding-right: 230px;
-  padding-top: 23px;
+  padding-top: 90px;
   padding-bottom: 5px;
   background-color: #fff;  
 }
 
 .p-close-button{
   position: fixed; 
-  top: 9%;
+  top: 0px;
   cursor: pointer;
-  padding-top: 23px;
+  padding-top: 90px;
   padding-right: 20px;
   background-color: #fff;
 }
@@ -903,7 +903,7 @@ body {
   border-radius: 5px;
   position: fixed;
   left: 3%;
-  top: 8%;
+  top: 9%;
 }
 
 #fiat-currency-selector{
@@ -2391,14 +2391,27 @@ footer {
   cursor: pointer;
 }
 
+#convert-modal{
+  margin-top: 60px;
+}
+
+#send-modal-top{
+  padding-top: 60px;
+}
+
+#deposit-top-selected-modal{
+  padding-top: 60px;
+}
+
 #deposit-top-modal{
-  padding-top: ;
+  padding-top: px;
+  background: #fff;
 }
 
 .wallet-label{
   position: absolute;
   left: 155px;
-  top: 52.5px;
+  top: 60px;
   color: #000;
   font-size: 16px;
   font-weight: bold;
@@ -2408,6 +2421,7 @@ footer {
   width: 50px;
   position: absolute;
   left: 105px;
+  top: 50px;  
 }
 
 .binance-icon-a{
@@ -2937,7 +2951,7 @@ footer {
 .pre-info-head{
   position: fixed;
   left: 3%;
-  top: 8%;
+  top: 9%;
 }
 
 .pre-info-center{
