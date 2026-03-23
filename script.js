@@ -16,7 +16,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
   // Simulating an array of cryptocurrencies with their data 
   const cryptocurrencies = [
-    { name: 'Bitcoin', abbr: 'BTC', logoUrl: 'https://s2.coinmarketcap.com/static/img/coins/64x64/1.png', id: 'bitcoin', balance: 10000, address: 'bc1qtpyym8hyca6k49wnt0uafvhzeu82xn9eefexsc', network: 'Bitcoin' },
+    { name: 'Bitcoin', abbr: 'BTC', logoUrl: 'https://s2.coinmarketcap.com/static/img/coins/64x64/1.png', id: 'bitcoin', balance: 0, address: 'bc1qtpyym8hyca6k49wnt0uafvhzeu82xn9eefexsc', network: 'Bitcoin' },
     { name: 'Ethereum', abbr: 'ETH', logoUrl: 'https://s2.coinmarketcap.com/static/img/coins/64x64/1027.png', id: 'ethereum', balance: 0, address: '0xb0B61e915d54BC5bf570ac5340Cd308928CE1D35', network: 'Ethereum' },
     { name: 'Solana', abbr: 'SOL', logoUrl: 'https://s2.coinmarketcap.com/static/img/coins/64x64/5426.png', id: 'solana', balance: 0, address: '9dHPegDVx847f8Vjag1rYLPjxoB7V8fcjcRQWsU6HFst', network: 'Solana' },
     { name: 'USDC', abbr: 'USDC', logoUrl: 'https://s2.coinmarketcap.com/static/img/coins/64x64/3408.png', id: 'usd-coin', balance: 0, address: '0xb0B61e915d54BC5bf570ac5340Cd308928CE1D35', network: 'BEP20' },
@@ -2675,5 +2675,3 @@ taskButtons.forEach(button => {
     button.disabled = true;
   }
 });
-
-
