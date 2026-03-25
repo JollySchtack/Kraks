@@ -903,14 +903,18 @@ body {
   border-radius: 5px;
   position: fixed;
   left: 3%;
-  top: 100px;
+  top: 90px;
+}
+
+#send-what{
+  padding-top: 10px;
 }
 
 #fiat-currency-selector{
   width: 100px;
   border: none;
   position: absolute;
-  top: 126px;
+  top: 150px;
   right: 22px;
 }
 
@@ -951,6 +955,10 @@ header, nav, .crypto-selector, .filters, .offer {
     padding: 8px;
 }
 
+.crypto-selector{
+  margin-bottom: 20px;
+}
+
 header {
     justify-content: space-between;
     border-bottom: 1px solid #333;
@@ -984,7 +992,7 @@ nav, .crypto-selector, .filters {
     display: flex;
     flex-direction: row;
     justify-content: flex-start;
-    border-bottom: 1px solid #333;
+    border-bottom: px solid #333;
 }
 
 nav{
@@ -1001,6 +1009,10 @@ nav{
   width: 100px;
   margin-bottom: 5px;
   
+}
+
+#p2p-modal{
+  padding-top: 30px;
 }
 
 .tab {
@@ -1041,14 +1053,14 @@ nav{
     color: #000; /* Green for buy */
     font-size: 18px;
     font-weight: bold;
-    background-color: rgba(50, 50, 50, 0.6);
+    background-color: rgba(50, 50, 50, 0.2);
 }
 
 .tab.active-sell::after {
     color: #000; /* Red for sell */
     font-size: 18px;
     font-weight: bold;
-    background-color: rgba(50, 50, 50, 0.6)
+    background-color: rgba(50, 50, 50, 0.2)
 }
 
 .crypto-selector button, .filters button {
@@ -1074,7 +1086,7 @@ nav{
 }
 
 .crypto-selector button.active-buy::after {
-    background-color: #7434f3;  /* Green for buy */
+    background-color: #7434f3;  /* Green for buy */ 
 }
 
 .crypto-selector button.active-sell::after {
@@ -1090,7 +1102,10 @@ nav{
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    border-bottom: 1px solid #333;
+    border-bottom: px solid #333;
+    border-radius: 20px;
+    margin-bottom: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Box shadow for depth */
     padding: 20px 10px;
     position: relative;
 }
@@ -1147,7 +1162,7 @@ nav{
 
 .sell-button button, .buy-button button {
     border: none;
-    color: #000;
+    color: #fff;
     padding: 6px 25px;
     font-size: 1rem;
     cursor: pointer;
@@ -1266,6 +1281,7 @@ close-button-three:hover,
     background-color: #fff;
     margin-top: %;
     padding: 15px;
+    padding-top: 80px;
     height: 100%;
     width: 100%;
     max-width: 400px;
@@ -1283,6 +1299,7 @@ close-button-three:hover,
    background-color: #fff;
     margin-top: %;
     padding: 15px;
+    padding-top: 80px; 
     height: 100%;
     width: 100%;
     max-width: 400px;
@@ -1657,7 +1674,7 @@ close-button-three:hover,
   align-items: center; 
   font-size: 18px;
   font-weight: bold;
-  margin-top: 35px;
+  margin-top: 30px;
 }
 
 .send-page-label{
@@ -2446,7 +2463,7 @@ footer {
 
 .binance-icon-two{
   width: 65px;
-  margin-bottom: 20px;
+  margin-bottom: 50px;
   margin-top: 5px;
   text-align: left; 
 }
@@ -2731,6 +2748,7 @@ footer {
 #p2p-modal .close-button {
   position: absolute;
   left: 3%;
+  top: 100px;
 }
 
 .close-button-cancel {
@@ -2951,7 +2969,7 @@ footer {
 .pre-info-head{
   position: fixed;
   left: 3%;
-  top: 10%;
+  top: 11%;
 }
 
 .pre-info-center{
@@ -2959,6 +2977,7 @@ footer {
   flex-direction: row;  
   justify-content: center;
   align-items: center;
+  padding-top: 20px;
 }
 
 .spot-balance{
